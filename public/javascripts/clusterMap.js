@@ -276,8 +276,11 @@ for (i = 0; i <= 2; i++) {
 
         // Add details to the individual report.
         var details = report.appendChild(document.createElement('div'));
-        details.innerHTML =
-          'This route ' + detail + ' through an avoidance area.';
+        if(detail==='goes')
+        details.innerHTML ='We recommend not to take this route as their is an unsafe area nearby this route .';
+        else
+        details.innerHTML ='This route is safe for travelling .';
+
         report.appendChild(document.createElement('hr'));
       });
     });
